@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MYAIGURU | Trainer Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <b class="logo">M</b>
+        <div><strong>MYAIGURU</strong><small>AI LEARNING PLATFORM</small></div>
+      </div>
+      <p class="nav-label">WORKSPACE</p>
+      <nav>
+        <button class="nav active" data-page="overview">
+          ▦ &nbsp; Overview</button
+        ><button class="nav" data-page="learners">
+          ♙ &nbsp; Learners <em>120</em></button
+        ><button class="nav" data-page="batches">▤ &nbsp; Batches</button
+        ><button class="nav" data-page="assignments">
+          ✓ &nbsp; Assignments <em class="red">18</em></button
+        ><button class="nav" data-page="assistant">✧ &nbsp; AI Assistant</button
+        ><button class="nav" data-page="planner">▧ &nbsp; Lesson Planner</button
+        ><button class="nav" data-page="quiz">☷ &nbsp; Quiz Generator</button
+        ><button class="nav" data-page="reminders">◷ &nbsp; Reminders</button
+        ><button class="nav" data-page="reports">▥ &nbsp; Reports</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help">
+          <b>Need help?</b>
+          <p>Visit the trainer help centre for guidance.</p>
+          <button id="helpBtn">Open help centre ↗</button>
+        </div>
+        <div class="profile">
+          <span class="avatar">PP</span>
+          <div><b>Pallavi Pawar</b><small>Trainer workspace</small></div>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <button id="menuBtn" class="mobile">☰</button>
+        <div class="crumb">
+          Workspace <span>/</span> <b id="crumb">Overview</b>
+        </div>
+        <div class="top-right">
+          <span id="date"></span
+          ><button id="notify" class="bell">♧<i></i></button
+          ><span class="avatar">PP</span>
+        </div>
+      </header>
+      <section class="page shown" id="overview">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">MONDAY, LEARNING IN MOTION</small>
+            <h1>Good morning, Pallavi <span>✦</span></h1>
+            
+          </div>
+          <button class="primary" id="create">
+            ＋ Create learning content
+          </button>
+        </div>
+        <div class="program">
+          <b><i></i> AI Foundations — 4 Week Program</b><span>Cohort 2026</span>
+          <div class="week">
+            Program progress <b>Week 2 of 4</b>
+            <div class="progress"><i style="width: 50%"></i></div>
+          </div>
+        </div>
+        <div class="section-head">
+          <div>
+            <h2>Program overview</h2>
+            <p>Key learner engagement metrics at a glance</p>
+          </div>
+          <button class="link" data-go="reports">View detailed report →</button>
+        </div>
+        <div class="stats">
+          <article>
+            <div class="stat-label">
+              Total learners <span class="symbol purple">♙</span>
+            </div>
+            <strong>120</strong
+            ><small><b class="green">4 batches</b> · Across the program</small>
+          </article>
+          <article>
+            <div class="stat-label">
+              Attendance rate <span class="symbol blue">◷</span>
+            </div>
+            <strong>78%</strong
+            ><small><b class="amber">Needs attention</b> · Target: 85%</small>
+            <div class="line"><i style="width: 78%"></i></div>
+          </article>
+          <article>
+            <div class="stat-label">
+              On-time submissions <span class="symbol orange">✓</span>
+            </div>
+            <strong>62%</strong
+            ><small><b class="amber">Below target</b> · Target: 75%</small>
+            <div class="line orange-line"><i style="width: 62%"></i></div>
+          </article>
+          <article>
+            <div class="stat-label">
+              Pending reviews <span class="symbol pink">▤</span>
+            </div>
+            <strong>18</strong
+            ><small
+              ><b class="red-text">6 due today</b> · Across 4 batches</small
+            >
+          </article>
+        </div>
+        <div class="columns">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Batch performance</h2>
+                <p>Attendance across active batches</p>
+              </div>
+              <button class="link" data-go="batches">View all →</button>
+            </div>
+            <div class="batch-row">
+              <b>Batch A<small>30 learners</small></b>
+              <div class="bar"><i style="width: 86%"></i></div>
+              <b>86%</b><span class="tag good">On track</span>
+            </div>
+            <div class="batch-row">
+              <b>Batch B<small>30 learners</small></b>
+              <div class="bar"><i style="width: 79%"></i></div>
+              <b>79%</b><span class="tag mid">Average</span>
+            </div>
+            <div class="batch-row">
+              <b>Batch C<small>30 learners</small></b>
+              <div class="bar"><i style="width: 72%"></i></div>
+              <b>72%</b><span class="tag low">At risk</span>
+            </div>
+            <div class="batch-row">
+              <b>Batch D<small>30 learners</small></b>
+              <div class="bar"><i style="width: 75%"></i></div>
+              <b>75%</b><span class="tag mid">Average</span>
+            </div>
+            <div class="panel-foot">Based on latest attendance records</div>
+          </article>
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Trainer action queue</h2>
+                <p>Items that need your attention</p>
+              </div>
+              <span class="tag info">4 tasks</span>
+            </div>
+            <div class="task">
+              <span class="symbol green-bg">✓</span>
+              <div>
+                <b>Review pending assignments</b
+                ><small>18 submissions · 6 due today</small>
+              </div>
+              <button data-go="assignments">→</button>
+            </div>
+            <div class="task">
+              <span class="symbol orange">◷</span>
+              <div>
+                <b>Follow up on attendance</b
+                ><small>Batch C has the lowest attendance</small>
+              </div>
+              <button data-go="batches">→</button>
+            </div>
+            <div class="task">
+              <span class="symbol purple">✧</span>
+              <div>
+                <b>Approve AI lesson draft</b
+                ><small>Week 2 · Introduction to ML</small>
+              </div>
+              <button data-go="assistant">→</button>
+            </div>
+            <div class="task">
+              <span class="symbol blue">✉</span>
+              <div>
+                <b>Send learner feedback</b
+                ><small>5 feedback drafts ready for review</small>
+              </div>
+              <button data-go="assignments">→</button>
+            </div>
+          </article>
+        </div>
+        <div class="insight">
+          <span class="spark">✧</span>
+          <div>
+            <small>AI-POWERED INSIGHT · FOR TRAINER REVIEW</small
+            ><b>Batch C may need an extra support session</b>
+            <p>
+              Attendance is 72%, below the program average of 78%. Consider a
+              short recap session and a reminder to learners. This suggestion is
+              based on dashboard data.
+            </p>
+          </div>
+          <button class="outline" id="reviewInsight">Review suggestion</button>
+        </div>
+        <p class="disclaimer">
+          Demo dashboard · Sample data for assessment presentation. AI
+          suggestions require trainer review before use.
+        </p>
+      </section>
+      <section class="page" id="learners">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">LEARNER MANAGEMENT</small>
+            <h1>Learners</h1>
+            <p>Track learner participation and progress.</p>
+          </div>
+          <button class="primary" id="exportLearners">↓ Export learners</button>
+        </div>
+        <div class="panel table-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Learner directory</h2>
+              <p>Sample learner records</p>
+            </div>
+            <input id="learnerSearch" placeholder="Search learner..." />
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>LEARNER</th>
+                  <th>BATCH</th>
+                  <th>ATTENDANCE</th>
+                  <th>ASSIGNMENTS</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody id="learnerRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="page" id="batches">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">COHORT MANAGEMENT</small>
+            <h1>Batch performance</h1>
+            <p>Compare engagement across the four active batches.</p>
+          </div>
+        </div>
+        <div class="batch-cards" id="batchCards"></div>
+      </section>
+      <section class="page" id="assignments">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">ASSESSMENT WORKSPACE</small>
+            <h1>Assignments</h1>
+            <p>Review learner submissions and AI-assisted feedback drafts.</p>
+          </div>
+          <button class="primary" id="filterPending">Show pending only</button>
+        </div>
+        <div class="panel table-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Recent submissions</h2>
+              <p>AI feedback is a draft and must be checked by a trainer.</p>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>LEARNER</th>
+                  <th>ASSIGNMENT</th>
+                  <th>SUBMITTED</th>
+                  <th>AI DRAFT</th>
+                  <th>ACTION</th>
+                </tr>
+              </thead>
+              <tbody id="assignmentRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <section class="page" id="assistant">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">TRAINER COPILOT</small>
+            <h1>AI Assistant <span>✧</span></h1>
+            <p>
+              Prepare learning content with AI while keeping the trainer in
+              control.
+            </p>
+          </div>
+          <span class="tag mid">Trainer approval required</span>
+        </div>
+        <div class="assistant-grid">
+          <div class="panel chat">
+            <div class="chat-head">
+              <span class="spark">✧</span>
+              <div>
+                <b>MYAIGURU Learning Assistant</b
+                ><small>● Ready to help · Demo mode</small>
+              </div>
+            </div>
+            <div id="chatBody" class="chat-body">
+              <div class="bot-msg">
+                <b>Welcome!</b>
+                <p>
+                  I can help draft lesson plans, create quiz questions, simplify
+                  concepts, and prepare learner reminders. Please review all
+                  generated content before sharing it.
+                </p>
+              </div>
+              <div class="chips">
+                <button
+                  data-prompt="Create a 30-minute lesson outline introducing machine learning to beginners."
+                >
+                  Create lesson outline</button
+                ><button
+                  data-prompt="Create 5 beginner quiz questions about supervised learning."
+                >
+                  Generate quiz</button
+                ><button
+                  data-prompt="Explain overfitting in simple language with an example."
+                >
+                  Explain a concept
+                </button>
+              </div>
+            </div>
+            <form id="chatForm">
+              <input
+                id="chatInput"
+                placeholder="Ask the learning assistant..."
+              /><button class="primary">↑</button>
+            </form>
+            <small class="demo-note"
+              >Demo responses only; no external AI service is connected.</small
+            >
+          </div>
+          <div class="panel guardrails">
+            <h2>Responsible AI checklist</h2>
+            <p>Keep learning decisions accurate, safe and human-led.</p>
+            <div>
+              <b>✓ Approved learning sources</b
+              ><small>Use trainer-approved lesson material as reference.</small>
+            </div>
+            <div>
+              <b>✓ Trainer review</b
+              ><small>Check every lesson, quiz and feedback draft.</small>
+            </div>
+            <div>
+              <b>✓ Escalate uncertainty</b
+              ><small>AI should say when it cannot verify an answer.</small>
+            </div>
+            <div>
+              <b>✓ Protect learner data</b
+              ><small>Do not enter unnecessary personal information.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page" id="planner">
+        <div class="heading"><div><small class="eyebrow">CONTENT PREPARATION</small><h1>AI Lesson Planner</h1><p>Create a structured lesson draft for trainer review.</p></div><span class="tag mid">Drafts need approval</span></div>
+        <div class="panel tool-panel">
+          <div class="form-grid"><label>Lesson topic<input id="lessonTopic" value="Introduction to Machine Learning" /></label><label>Duration<select id="lessonDuration"><option>30 minutes</option><option>45 minutes</option><option>60 minutes</option></select></label><label>Learner level<select id="lessonLevel"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label></div>
+          <button class="primary" id="generateLesson">✧ Generate lesson draft</button>
+          <div id="lessonOutput" class="generated-output"><b>Your lesson draft will appear here.</b><p>Enter a topic and choose the learner level to create a sample outline.</p></div>
+          <div class="action-row"><button class="outline" id="editLesson">Edit draft</button><button class="primary" id="approveLesson">Approve lesson draft</button></div>
+        </div>
+        <div class="panel report-note"><b>Trainer control</b><p>Review learning objectives, examples, timing and source alignment before sharing any lesson with learners.</p></div>
+      </section>
+      <section class="page" id="quiz">
+        <div class="heading"><div><small class="eyebrow">ASSESSMENT DESIGN</small><h1>Quiz Generator</h1><p>Prepare a quick knowledge check with adjustable difficulty.</p></div></div>
+        <div class="panel tool-panel"><div class="form-grid"><label>Topic<input id="quizTopic" value="Supervised Learning" /></label><label>Number of questions<select id="quizCount"><option>5</option><option>10</option><option>15</option></select></label><label>Difficulty<select id="quizDifficulty"><option>Easy</option><option>Medium</option><option>Hard</option></select></label></div><button class="primary" id="generateQuiz">✧ Generate quiz</button><div id="quizOutput" class="generated-output"><b>Quiz preview</b><p>Generated questions will appear here for trainer review.</p></div><div class="action-row"><button class="outline" id="regenerateQuiz">Regenerate</button><button class="primary" id="approveQuiz">Approve quiz</button></div></div>
+      </section>
+      <section class="page" id="reminders">
+        <div class="heading"><div><small class="eyebrow">LEARNER ENGAGEMENT</small><h1>Schedule & Reminders</h1><p>Prepare reminders and announcements. Sending is simulated in this demo.</p></div></div>
+        <div class="panel tool-panel"><div class="form-grid"><label>Audience<select id="reminderAudience"><option>All learners</option><option>Batch A</option><option>Batch B</option><option>Batch C</option><option>Batch D</option><option>Learners with pending assignments</option></select></label><label>Reminder type<select id="reminderType"><option>Assignment deadline</option><option>Attendance follow-up</option><option>Upcoming session</option><option>General announcement</option></select></label><label>Schedule date<input id="reminderDate" type="date" /></label></div><label class="full-label">Message<textarea id="reminderMessage" rows="4">Reminder: please complete your pending assignment before the deadline. Contact your trainer if you need support.</textarea></label><div class="action-row"><button class="outline" id="previewReminder">Preview message</button><button class="primary" id="approveReminder">Approve & schedule demo reminder</button></div><div id="reminderOutput" class="generated-output"><b>Trainer approval required</b><p>Preview the message and confirm the audience before scheduling.</p></div></div>
+        <div class="panel table-panel"><div class="panel-head"><div><h2>Reminder queue</h2><p>Demo schedule history</p></div></div><div class="table-wrap"><table><thead><tr><th>AUDIENCE</th><th>TYPE</th><th>DATE</th><th>STATUS</th></tr></thead><tbody id="reminderRows"><tr><td>Batch C</td><td>Attendance follow-up</td><td>Today</td><td><span class="status risk">Needs approval</span></td></tr></tbody></table></div></div>
+      </section>
+      <section class="page" id="reports">
+        <div class="heading">
+          <div>
+            <small class="eyebrow">PROGRAM ANALYTICS</small>
+            <h1>Reports</h1>
+            <p>Monitor outcomes against proposed pilot targets.</p>
+          </div>
+          <button class="primary" id="downloadReport">
+            ↓ Download summary
+          </button>
+        </div>
+        <div class="panel report">
+          <h2>Baseline vs proposed pilot targets</h2>
+          <p>Targets are planning goals, not guaranteed outcomes.</p>
+          <div class="metric">
+            <div>
+              <b>Attendance rate</b><small>Current 78% · Target 85%</small>
+            </div>
+            <div class="report-bar">
+              <i style="width: 78%"></i><b style="left: 85%"></b>
+            </div>
+            <strong>78%</strong>
+          </div>
+          <div class="metric">
+            <div>
+              <b>On-time submissions</b><small>Current 62% · Target 75%</small>
+            </div>
+            <div class="report-bar">
+              <i class="orange-fill" style="width: 62%"></i
+              ><b style="left: 75%"></b>
+            </div>
+            <strong>62%</strong>
+          </div>
+          <div class="metric">
+            <div>
+              <b>Feedback turnaround</b
+              ><small>Current 4 days · Target ≤2 days</small>
+            </div>
+            <div class="report-bar">
+              <i class="purple-fill" style="width: 50%"></i>
+            </div>
+            <strong>4 days</strong>
+          </div>
+        </div>
+        <div class="panel report-note">
+          <b>✧ Suggested measurement approach</b>
+          <p>
+            Review attendance weekly, track assignment timestamps, and measure
+            feedback turnaround from submission to trainer-approved feedback.
+            Audit a sample of AI-assisted feedback for accuracy before scaling.
+          </p>
+        </div>
+      </section>
+    </main>
+    <div id="toast" class="toast"></div>
+    <div id="modal" class="modal-bg">
+      <div class="modal">
+        <button id="closeModal" class="close">×</button
+        ><span class="spark">✧</span>
+        <h2 id="modalTitle">Review AI suggestion</h2>
+        <p id="modalText"></p>
+        <div class="modal-actions">
+          <button class="outline" id="dismiss">Close</button
+          ><button class="primary" id="markReviewed">Mark reviewed</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
